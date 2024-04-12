@@ -1,0 +1,162 @@
+/* Given Stylings */
+:root {
+  /* colors */
+  --clr-softBlue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+  --clr-dkBlue1: hsl(217, 54%, 11%);
+  --clr-dkBlue2: hsl(216, 50%, 16%);
+  --clr-dkBlue3: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --font-outfit: "Outfit", sans-serif;
+
+  /* font weights */
+  --wt-light: 300;
+  --mt-med: 400;
+  --wt-bold: 600;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--clr-dkBlue1);
+  font-family: var(--font-outfit);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+h1 {
+  color: var(--clr-white);
+  font-size: 1.35em;
+  font-weight: var(--wt-bold);
+}
+
+p {
+  font-weight: var(--wt-light);
+  font-size: 1.1em;
+}
+
+hr {
+  color: var(--clr-dkBlue3);
+  margin-top: 0.5em;
+}
+
+h1:hover,
+.creatorName:hover {
+  color: var(--clr-cyan);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-dkBlue2);
+  color: var(--clr-softBlue);
+  padding: 1.25em;
+  border-radius: 0.5em;
+  width: 375px;
+  gap: 1.25em;
+  box-shadow: #0c1729 0px 0px 10px 25px, #0c192c 0px 0px 1px 40px;
+}
+
+.saleInfo {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 0.9em;
+}
+
+.nftImg {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.color {
+  position: absolute;
+  background-color: var(--clr-cyan);
+  border-radius: 0.5em;
+  width: 330px;
+  height: 330px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.hoverImg {
+  transition: 0.3s ease;
+}
+
+.mainImg:hover {
+  cursor: pointer;
+}
+
+.mainImg:hover .color {
+  opacity: 0.5;
+}
+
+.mainImg:hover .hoverImg {
+  opacity: 1;
+}
+
+.icon {
+  vertical-align: sub;
+  margin-right: 0.2em;
+}
+
+.hoverImg {
+  position: absolute;
+  top: 31.5%;
+  right: 48.75%;
+  opacity: 0;
+}
+
+.avatar {
+  height: 2em;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: 1em;
+}
+
+.price {
+  color: var(--clr-cyan);
+  font-weight: var(--wt-med);
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.creatorName {
+  color: var(--clr-white);
+  padding: 0.25em;
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+  color: var(--clr-white);
+  font-size: 11px;
+  text-align: center;
+  height: 2vh;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
